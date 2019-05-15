@@ -1,0 +1,44 @@
+
+- name: Updating
+  shell: apt-get update
+  sudo: true
+
+- name: Installing git
+  shell: apt-get install git -y
+  sudo: true
+
+- name: Installing pip
+  script: scripts/install-pip.sh
+  sudo: true
+
+- name: Installing ansible
+  script: scripts/install-ansible.sh
+  sudo: true
+
+- name: Installing docker
+  script: scripts/install-docker.sh
+  sudo: true
+
+- name: Installing empire
+  script: scripts/install-empire.sh
+  sudo: true
+
+- name: Installing dirsearch
+  script: scripts/install-dirsearch.sh
+  sudo: true
+  
+- name: Installing rpivot
+  script: scripts/install-rpivot.sh
+  sudo: true
+  
+- name: Installing wfuzz
+  script: scripts/install-wfuzz.sh
+  sudo: true
+
+- name: Installing pycharm
+  script: scripts/install-pycharm.sh
+  sudo: true
+
+- name: Updating the database
+  shell: updatedb
+  sudo: true

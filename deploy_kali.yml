@@ -1,0 +1,12 @@
+- hosts: kali
+  tasks:
+    # Wallpaper
+    - import_tasks: roles/change_wallpaper.yml
+    # Scripts deploy - Each script is for a tool
+    # All scripts are in the dir Scripts
+    - import_tasks: roles/deploy_scripts.yml
+    # Deploy leaked/SecList wordlists
+    - import_tasks: roles/deploy_wordlists.yml
+    # Deploy bins
+    - import_tasks: roles/deploy_bins.yml
+    - import_tasks: roles/wrap-up.yml

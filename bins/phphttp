@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ "$#" -eq  "1" ]
+then
+     	php -S 0.0.0.0:$1
+else
+	php -S 0.0.0.0:80 
+fi

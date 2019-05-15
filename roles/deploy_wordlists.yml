@@ -1,0 +1,19 @@
+
+- name: Downloading SecLists
+  shell: cd /usr/share/wordlists/; git clone https://github.com/danielmiessler/SecLists.git
+  sudo: true
+
+- name: Downloading brutespray
+  shell: cd /usr/share/wordlists/; git clone https://github.com/x90skysn3k/brutespray.git
+  sudo: true
+
+- name: Copying local wordlists
+  copy:
+    src: "{{ item }}"
+    dest: '/usr/share/wordlists/'
+  with_fileglob:
+    - "wordlists/*"
+
+- name: Updating the database
+  shell: updatedb
+  sudo: true
