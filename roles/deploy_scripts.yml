@@ -39,6 +39,10 @@
   script: scripts/install-pycharm.sh
   sudo: true
 
+- name: Installing gophish
+  script: scripts/install-gophish.sh
+  sudo: true
+  
 - name: Updating the database
   shell: updatedb
   sudo: true

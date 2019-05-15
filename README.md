@@ -1,2 +1,4 @@
-# Kali-TX
-Customize Kali Linux
+Assuming all these are installed:
+expect
+git
+
