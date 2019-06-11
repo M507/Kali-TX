@@ -48,8 +48,32 @@
   script: scripts/install-powershell.sh
   sudo: true
 
+# Git is required
+- name: Coning and installing IntruderPayloads 
+  shell: git clone https://github.com/1N3/IntruderPayloads.git /opt/IntruderPayloads;cd /opt/IntruderPayloads; chmod +x install.sh; bash install.sh
+  sudo: true
+
+# Git is required
+- name: Coning and installing Findsploit
+  shell: git clone https://github.com/1N3/Findsploit.git /opt/Findsploit;cd /opt/Findsploit; chmod +x install.sh; bash install.sh
+  sudo: true
+
+# Git is required
+- name: Coning and installing BruteX
+  shell: git clone https://github.com/1N3/BruteX.git /opt/BruteX; cd /opt/BruteX; chmod +x install.sh; bash install.sh 
+  sudo: true
+
+# Git is required
+- name: Coning and installing Goohak
+  script: scripts/install-Goohak.sh
+  sudo: true
+
+# Git is required
+- name: Coning and installing BlackWidow
+  script: scripts/install-BlackWidow.sh
+  sudo: true
+
 - name: Updating the database
   shell: updatedb
   sudo: true
-
 

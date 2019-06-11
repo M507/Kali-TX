@@ -1,1 +1,19 @@
+# Kali-TX
 
+- Ansible
+- Docker
+- Empire
+- Dirsearch
+- Rpivot
+- Pycharm
+- BruteX
+- BlackWidow
+- Gophish
+- Powershell
+- PayloadsAllTheThings
+- Fuzzdb
+- Big-list-of-naughty-strings
+- RobotsDisallowed
+- SecLists
+- Findsploit
+- IntruderPayloads
