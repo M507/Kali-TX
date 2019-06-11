@@ -10,6 +10,7 @@
 - BlackWidow
 - Gophish
 - Powershell
+- Invoke-Obfuscation
 - PayloadsAllTheThings
 - Fuzzdb
 - Big-list-of-naughty-strings
