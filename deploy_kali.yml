@@ -2,9 +2,13 @@
   tasks:
     # Wallpaper
     - import_tasks: roles/change_wallpaper.yml
+    # Install the core packages
+    - import_tasls: roles/deploy_core.yml
     # Scripts deploy - Each script is for a tool
     # All scripts are in the dir Scripts
     - import_tasks: roles/deploy_scripts.yml
+    # Extra good stuff :) 
+    - import_tasks: rolse/deploy_extra_scripts.yml
     # Deploy leaked/SecList wordlists
     - import_tasks: roles/deploy_wordlists.yml
     # Deploy bins

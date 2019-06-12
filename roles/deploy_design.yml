@@ -3,12 +3,15 @@
   shell: apt-get update
   sudo: true
 
+- name: Installing git
+  shell: apt-get install git -y
+  sudo: true
+
 # Git is required
 - name: Coning Invoke-Obfuscation
-  shell: git clone https://github.com/danielbohannon/Invoke-Obfuscation.git /opt/Invoke-Obfuscation 
+  shell: apt-get install tree -y 
   sudo: true
 
 - name: Updating the database
   shell: updatedb
   sudo: true
-
