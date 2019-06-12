@@ -5,6 +5,7 @@
 - Empire
 - Dirsearch
 - Rpivot
+- Tree
 - Pycharm
 - BruteX
 - BlackWidow
