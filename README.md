@@ -1,5 +1,6 @@
 # Kali-TX
-
+Ansible playbook to deploy important tools that Kali Linux is missing. 
+### Deploys
 - Ansible
 - Docker
 - Empire
@@ -12,11 +13,12 @@
 - Gophish
 - Powershell
 - PowerSploit
+- QSearchSploit
+- Findsploit
+- IntruderPayloads
 - Invoke-Obfuscation
 - PayloadsAllTheThings
 - Fuzzdb
 - Big-list-of-naughty-strings
 - RobotsDisallowed
 - SecLists
-- Findsploit
-- IntruderPayloads
