@@ -11,6 +11,7 @@
 - BlackWidow
 - Gophish
 - Powershell
+- PowerSploit
 - Invoke-Obfuscation
 - PayloadsAllTheThings
 - Fuzzdb

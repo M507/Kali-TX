@@ -32,6 +32,10 @@
   script: scripts/install-powershell.sh
   sudo: true
 
+- name: Cloning PowerSploit
+  shell: git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/PowerSploit
+  sudo: true
+
 # Git is required
 - name: Coning and installing IntruderPayloads 
   shell: git clone https://github.com/1N3/IntruderPayloads.git /opt/IntruderPayloads;cd /opt/IntruderPayloads; chmod +x install.sh; bash install.sh
