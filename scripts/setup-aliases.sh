@@ -33,6 +33,8 @@ ex() {
   fi
 }
 
+# alias cd='cd ; ls -arthl'
+
 # ex() is copied from https://github.com/Raikia/Kali-Setup/blob/master/kali.py
 #Add here..
 " >> /etc/bash.bashrc
