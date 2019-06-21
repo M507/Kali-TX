@@ -60,6 +60,10 @@
 - name: Coning and installing BlackWidow
   script: scripts/install-BlackWidow.sh
   sudo: true
+  
+- name: Installing bettercap
+  shell: apt-get install bettercap -y
+  sudo: true
 
 - name: Updating the database
   shell: updatedb
