@@ -27,3 +27,4 @@ Ansible playbook to deploy important tools that Kali Linux is missing.
 - RobotsDisallowed
 - SecLists
 - Bettercap
+- Unicorn
