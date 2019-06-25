@@ -52,6 +52,11 @@
   sudo: true
 
 # Git is required
+- name: Coning and installing Unicorn
+  shell: git clone https://github.com/trustedsec/unicorn.git /opt/unicorn ; cd /opt/unicorn; chmod +x unicorn.py 
+  sudo: true
+
+# Git is required
 - name: Coning and installing Goohak
   script: scripts/install-Goohak.sh
   sudo: true
