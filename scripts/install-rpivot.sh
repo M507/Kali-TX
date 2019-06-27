@@ -1,5 +1,8 @@
 #!/bin/bash
-cd /opt
-git clone https://github.com/klsecservices/rpivot.git
+FILE=/opt/rpivot/server.py
 
-
+if [ -f "$FILE" ]; then
+    echo "Rpivot has been cloned"
+else
+	git clone https://github.com/klsecservices/rpivot.git
+fi
