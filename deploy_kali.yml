@@ -8,7 +8,7 @@
     # All scripts are in the dir Scripts
     - import_tasks: roles/deploy_scripts.yml
     # Extra good stuff :) 
-    - import_tasks: rolse/deploy_extra_scripts.yml
+    - import_tasks: roles/deploy_extra_scripts.yml
     # Deploy leaked/SecList wordlists
     - import_tasks: roles/deploy_wordlists.yml
     # Deploy bins
