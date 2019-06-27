@@ -3,7 +3,7 @@
     # Wallpaper
     - import_tasks: roles/change_wallpaper.yml
     # Install the core packages
-    - import_tasls: roles/deploy_core.yml
+    - import_tasks: roles/deploy_core.yml
     # Scripts deploy - Each script is for a tool
     # All scripts are in the dir Scripts
     - import_tasks: roles/deploy_scripts.yml
