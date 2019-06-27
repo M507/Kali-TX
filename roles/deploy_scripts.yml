@@ -28,9 +28,10 @@
   sudo: true
 
 # PowerShell has some weird dependency, so if something broke, it's because of it.
-- name: Installing PowerShell
-  script: scripts/install-powershell.sh
-  sudo: true
+# It breaks the deployment, needs to be fixed!
+#- name: Installing PowerShell
+#  script: scripts/install-powershell.sh
+#  sudo: true
 
 - name: Cloning PowerSploit
   shell: git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/PowerSploit
