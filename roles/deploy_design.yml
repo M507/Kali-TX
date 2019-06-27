@@ -7,8 +7,7 @@
   shell: apt-get install git -y
   sudo: true
 
-# Git is required
-- name: Coning Invoke-Obfuscation
+- name: Installing tree
   shell: apt-get install tree -y 
   sudo: true
 
