@@ -3,13 +3,11 @@
   shell: apt-get update
   sudo: true
 
-# Git is required
 - name: Coning Invoke-Obfuscation
   shell: git clone https://github.com/danielbohannon/Invoke-Obfuscation.git /opt/Invoke-Obfuscation 
   sudo: true
 
-# Git is required
-- name: Coning Invoke-Obfuscation
+- name: Coning QSearchSploit
   shell: git clone https://github.com/M507/QSearchSploit.git /opt/QSearchSploit; cd /opt/QSearchSploit; chmod +x setup.sh; bash setup.sh
   sudo: true
 
