@@ -9,6 +9,7 @@ Ansible playbook to deploy important tools that Kali Linux is missing.
 - Docker
 - Empire
 - Dirsearch
+- Aquatone
 - Rpivot
 - Tree
 - Pycharm
