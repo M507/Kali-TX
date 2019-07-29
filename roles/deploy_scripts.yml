@@ -61,6 +61,11 @@
 - name: Coning and installing Goohak
   script: scripts/install-Goohak.sh
   sudo: true
+  
+# Git is required
+- name: Coning and installing Aquatone
+  script: scripts/install-aquatone.sh
+  sudo: true
 
 # Git is required
 - name: Coning and installing BlackWidow
