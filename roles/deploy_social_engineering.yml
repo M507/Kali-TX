@@ -1,0 +1,13 @@
+
+- name: Updating
+  shell: apt-get update
+  sudo: true
+
+# Generate unicode evil domains for IDN Homograph Attack and detect them.
+- name: Coning EvilURL
+  script: scripts/install-EvilURL.sh
+  sudo: true
+
+- name: Updating the database
+  shell: updatedb
+  sudo: true
