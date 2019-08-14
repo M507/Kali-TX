@@ -29,6 +29,7 @@ Ansible playbook to deploy important tools that Kali Linux is missing.
 - SecLists
 - Bettercap
 - Unicorn
+- EvilURL
 
 ### How to install locally
 ```sh
