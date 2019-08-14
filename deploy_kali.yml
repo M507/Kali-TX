@@ -9,6 +9,8 @@
     - import_tasks: roles/deploy_scripts.yml
     # Extra good stuff :) 
     - import_tasks: roles/deploy_extra_scripts.yml
+    # Helpful tools before pentesting engagements  
+    #- import_tasks: roles/deploy_social_engineering.yml
     # Deploy leaked/SecList wordlists
     - import_tasks: roles/deploy_wordlists.yml
     # Deploy bins
