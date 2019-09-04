@@ -37,4 +37,15 @@ ex() {
 
 # ex() is copied from https://github.com/Raikia/Kali-Setup/blob/master/kali.py
 #Add here..
+
+# Docker aliases
+alias dockerkillallimages='docker rmi $(docker images -a -q)'
+alias dockerkillall='docker kill $(docker ps -q)'
+
+# docker exec -it "$@" bash
+dockergoto () {
+docker exec -it "$@" /bin/sh
+}
+
+
 " >> /etc/bash.bashrc
