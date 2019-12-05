@@ -21,6 +21,10 @@
   shell: cd /opt/;git clone https://github.com/Hackplayers/evil-winrm.git; sudo gem install winrm winrm-fs colorize stringio
   sudo: true
   
+- name: Installing CrackMapExec
+  shell: apt-get install crackmapexec -y 
+  sudo: true
+  
 - name: Updating the database
   shell: updatedb
   sudo: true
