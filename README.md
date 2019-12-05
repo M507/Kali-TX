@@ -18,6 +18,7 @@ Ansible playbook to deploy important tools that Kali Linux is missing.
 - Gophish
 - Powershell
 - PowerSploit
+- EvilWinrm
 - QSearchSploit
 - Findsploit
 - IntruderPayloads
