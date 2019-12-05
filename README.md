@@ -21,6 +21,7 @@ Ansible playbook to deploy important tools that Kali Linux is missing.
 - EvilWinrm
 - QSearchSploit
 - Findsploit
+- Crackmapexec
 - IntruderPayloads
 - Invoke-Obfuscation
 - PayloadsAllTheThings
