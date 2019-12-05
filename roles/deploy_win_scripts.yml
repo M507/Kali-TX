@@ -1,0 +1,26 @@
+
+- name: Updating
+  shell: apt-get update
+  sudo: true
+
+- name: Installing empire
+  script: scripts/install-empire.sh
+  sudo: true
+  
+- name: Cloning PowerSploit
+  shell: git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/PowerSploit
+  sudo: true
+
+# Git is required
+- name: Coning and installing Unicorn
+  shell: git clone https://github.com/trustedsec/unicorn.git /opt/unicorn ; cd /opt/unicorn; chmod +x unicorn.py 
+  sudo: true
+  
+  # Git is required
+- name: Coning and installing Evil Winrm
+  shell: cd /opt/;git clone https://github.com/Hackplayers/evil-winrm.git; sudo gem install winrm winrm-fs colorize stringio
+  sudo: true
+  
+- name: Updating the database
+  shell: updatedb
+  sudo: true
