@@ -47,5 +47,6 @@ dockergoto () {
 docker exec -it "$@" /bin/sh
 }
 
+alias cls='clear'
 
 " >> /etc/bash.bashrc
