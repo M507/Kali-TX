@@ -1,8 +1,8 @@
 
-- name: Updating the database
+- name: Update
   shell: updatedb
-  sudo: true
-  
+  ignore_errors: True
+
 # TODO: Find a better way to do this
 #- name: Cleaning
 #  shell: apt-get autoremove -y && apt-get autoclean && apt-get clean

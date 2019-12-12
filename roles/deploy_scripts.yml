@@ -1,27 +1,27 @@
 
 - name: Updating
   shell: apt-get update
-  sudo: true
 
 - name: Installing dirsearch
   script: scripts/install-dirsearch.sh
-  sudo: true
+  ignore_errors: True
   
 - name: Installing rpivot
   script: scripts/install-rpivot.sh
-  sudo: true
-  
+  ignore_errors: True
+
 - name: Installing wfuzz
   script: scripts/install-wfuzz.sh
-  sudo: true
+  ignore_errors: True
 
 - name: Installing pycharm
   script: scripts/install-pycharm.sh
-  sudo: true
+  ignore_errors: True
 
 - name: Installing gophish
   script: scripts/install-gophish.sh
-  sudo: true
+  ignore_errors: True
+
 
 # PowerShell has some weird dependency, so if something broke, it's because of it.
 # It breaks the deployment, needs to be fixed!
@@ -30,40 +30,42 @@
 #  sudo: true
 
 # Git is required
-- name: Coning and installing IntruderPayloads 
+- name: Clone and install  IntruderPayloads 
   shell: git clone https://github.com/1N3/IntruderPayloads.git /opt/IntruderPayloads;cd /opt/IntruderPayloads; chmod +x install.sh; bash install.sh
-  sudo: true
-
+  ignore_errors: True
+ 
 # Git is required
-- name: Coning and installing Findsploit
+- name: Clone and install  Findsploit
   shell: git clone https://github.com/1N3/Findsploit.git /opt/Findsploit;cd /opt/Findsploit; chmod +x install.sh; bash install.sh
-  sudo: true
-
+  ignore_errors: True
+ 
 # Git is required
-- name: Coning and installing BruteX
+- name: Clone and install BruteX
   shell: git clone https://github.com/1N3/BruteX.git /opt/BruteX; cd /opt/BruteX; chmod +x install.sh; bash install.sh 
-  sudo: true
+  ignore_errors: True
 
 # Git is required
-- name: Coning and installing Goohak
+- name: Clone and install Goohak
   script: scripts/install-Goohak.sh
-  sudo: true
-  
+  ignore_errors: True
+
 # Git is required
-- name: Coning and installing Aquatone
+- name: Clone and install Aquatone
   script: scripts/install-aquatone.sh
-  sudo: true
+  ignore_errors: True
+
 
 # Git is required
-- name: Coning and installing BlackWidow
+- name: Clone and install BlackWidow
   script: scripts/install-BlackWidow.sh
-  sudo: true
-  
-- name: Installing bettercap
-  shell: apt-get install bettercap -y
-  sudo: true
+  ignore_errors: True
 
-- name: Updating the database
+
+- name: Install bettercap
+  apt:
+    name: bettercap
+    state: present
+
+- name: Update the database
   shell: updatedb
-  sudo: true
 

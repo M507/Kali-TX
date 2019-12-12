@@ -1,30 +1,32 @@
 
-- name: Updating
-  shell: apt-get update
-  sudo: true
+- name: Update
+  apt:
+    update_cache: yes
 
-- name: Installing empire
+
+- name: Clone and install empire
   script: scripts/install-empire.sh
-  sudo: true
-  
-- name: Cloning PowerSploit
-  shell: git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/PowerSploit
-  sudo: true
+  ignore_errors: True  
 
 # Git is required
-- name: Coning and installing Unicorn
+- name: Clone PowerSploit
+  shell: git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/PowerSploit
+  ignore_errors: True
+
+# Git is required
+- name: Clone and install Unicorn
   shell: git clone https://github.com/trustedsec/unicorn.git /opt/unicorn ; cd /opt/unicorn; chmod +x unicorn.py 
-  sudo: true
-  
+  ignore_errors: True
+
   # Git is required
-- name: Coning and installing Evil Winrm
+- name: Clone and install Evil Winrm
   shell: cd /opt/;git clone https://github.com/Hackplayers/evil-winrm.git; sudo gem install winrm winrm-fs colorize stringio
-  sudo: true
-  
-- name: Installing CrackMapExec
-  shell: apt-get install crackmapexec -y 
-  sudo: true
-  
-- name: Updating the database
+  ignore_errors: True
+
+- name: Install CrackMapExec
+  apt:
+    name: crackmapexec
+    state: present
+ 
+- name: Update the database
   shell: updatedb
-  sudo: true

@@ -1,24 +1,19 @@
 
-- name: Updating
-  shell: apt-get update
-  sudo: true
+- name: Update
+  apt:
+    update_cache: yes
 
 - name: Installing docker
   script: scripts/install-docker.sh
-  sudo: true
 
-- name: Installing git
-  shell: apt-get install git -y
-  sudo: true
+- name: Install git
+  apt:
+    name: git
+    state: present
 
-- name: Installing pip
+- name: Install pip
   script: scripts/install-pip.sh
-  sudo: true
 
-- name: Installing ansible
-  script: scripts/install-ansible.sh
-  sudo: true
-
-- name: Updating the database
+- name: Update the database
   shell: updatedb
-  sudo: true
+

@@ -1,17 +1,17 @@
 
-- name: Updating
+- name: Update
   shell: apt-get update
-  sudo: true
+  ignore_errors: True
 
-- name: Coning Invoke-Obfuscation
+- name: Clone Invoke-Obfuscation
   shell: git clone https://github.com/danielbohannon/Invoke-Obfuscation.git /opt/Invoke-Obfuscation 
-  sudo: true
+  ignore_errors: True
 
-- name: Coning QSearchSploit
+- name: Clone QSearchSploit
   shell: git clone https://github.com/M507/QSearchSploit.git /opt/QSearchSploit; cd /opt/QSearchSploit; chmod +x setup.sh; bash setup.sh
-  sudo: true
+  ignore_errors: True
 
-- name: Updating the database
+- name: Update the database
   shell: updatedb
-  sudo: true
+  ignore_errors: True
 
