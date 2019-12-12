@@ -43,7 +43,11 @@ ansible-playbook deploy_kali.yml -i hosts.ini
 
 # If you are deplying it with the root user
 if [[ $string2 == *"root"* ]]; then
-	echo "Recovering "$sshd ".."
-	# Recover the old sshd_config file
-	mv $sshd.bk $sshd
+	if [[ $string1 == *"yes"* ]]; then
+  		echo "All set. Hack the planet!"
+	else
+		echo "Recovering "$sshd ".."
+		# Recover the old sshd_config file
+		mv $sshd.bk $sshd
+	fi
 fi
