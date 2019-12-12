@@ -41,7 +41,7 @@ bash deploy_locally.sh
 - EvilURL
 
 
-### Change log
+### Changelog
 ```sh
 root@kali:~# echo "Last test on:";lsb_release -a;date
 Last test on:
