@@ -4,6 +4,13 @@ echo 'Do not forget to change the credentials in hosts.ini'
 echo "Kill this process if you haven't changed them"
 sleep 8
 
+# Run as root
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
+
 echo 'This might take over 15 minutes, so curl https://$( cat Starbucks.menu | grep coffee )'
 
 
