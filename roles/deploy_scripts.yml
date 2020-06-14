@@ -35,9 +35,9 @@
   ignore_errors: True
  
 # Git is required
-- name: Clone and install  Findsploit
-  shell: git clone https://github.com/1N3/Findsploit.git /opt/Findsploit;cd /opt/Findsploit; chmod +x install.sh; bash install.sh
-  ignore_errors: True
+#- name: Clone and install  Findsploit
+#  shell: git clone https://github.com/1N3/Findsploit.git /opt/Findsploit;cd /opt/Findsploit; chmod +x install.sh; bash install.sh
+#  ignore_errors: True
  
 # Git is required
 - name: Clone and install BruteX

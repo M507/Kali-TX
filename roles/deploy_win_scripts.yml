@@ -23,10 +23,10 @@
   shell: cd /opt/;git clone https://github.com/Hackplayers/evil-winrm.git; sudo gem install winrm winrm-fs colorize stringio
   ignore_errors: True
 
-- name: Install CrackMapExec
-  apt:
-    name: crackmapexec
-    state: present
+#- name: Install CrackMapExec
+#  apt:
+#    name: crackmapexec
+#    state: present
  
 - name: Update the database
   shell: updatedb

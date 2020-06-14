@@ -33,6 +33,13 @@ if [[ $string2 == *"root"* ]]; then
 	fi
 fi
 
+# Fix the source repositories list 
+echo "
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+deb http://kali.cs.nctu.edu.tw/kali kali-rolling main contrib non-free
+deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+" >> /etc/apt/sources.list
+
 
 # Deploy
 echo 'Updating..'
@@ -43,9 +50,8 @@ bash scripts/install-ansible.sh
 # Start SSH
 echo 'Starting SSH..'
 systemctl start ssh
-systemctl status ssh
 # Start deploying
-ansible-playbook deploy_kali.yml -i hosts.ini
+ansible-playbook deploy_kali.yml -i hosts.ini -e 'ansible_python_interpreter=/usr/bin/python3'
 
 
 # If you are deplying it with the root user
