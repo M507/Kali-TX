@@ -8,7 +8,7 @@ Ansible playbook to deploy important tools that Kali Linux is missing.
 ```sh
 git clone https://github.com/M507/Kali-TX.git
 cd Kali-TX
-bash deploy_locally.sh
+sudo bash deploy_locally.sh
 ```
 
 ### Deploys
